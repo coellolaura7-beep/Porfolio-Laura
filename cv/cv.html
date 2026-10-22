@@ -1,0 +1,156 @@
+<!doctype html>
+<!--
+  CV de Laura Coello Cabada (A4, una página).
+  Para generar el PDF: abre este archivo en Chrome o Edge → Imprimir (Ctrl+P) →
+  Destino «Guardar como PDF», Márgenes «Ninguno», activa «Gráficos de fondo».
+  Guárdalo como documents/cv-laura-coello-cabada.pdf (sustituyendo el anterior).
+-->
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>CV · Laura Coello Cabada</title>
+    <style>
+      @font-face { font-family: 'Manrope'; font-weight: 200 800; src: url('../fonts/manrope-latin-wght-normal.woff2') format('woff2'); }
+      @font-face { font-family: 'Newsreader'; font-weight: 200 800; src: url('../fonts/newsreader-latin-opsz-normal.woff2') format('woff2'); }
+      @font-face { font-family: 'Newsreader'; font-style: italic; font-weight: 200 800; src: url('../fonts/newsreader-latin-opsz-italic.woff2') format('woff2'); }
+      @font-face { font-family: 'Plex Mono'; font-weight: 400; src: url('../fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2'); }
+      @font-face { font-family: 'Plex Mono'; font-weight: 500; src: url('../fonts/ibm-plex-mono-latin-500-normal.woff2') format('woff2'); }
+
+      @page { size: A4; margin: 0; }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      :root { --paper: #fbfaf6; --side: #efebe1; --ink: #22292b; --ink2: #444c4f; --ink3: #5d6567; --rule: #d9d2c3; --petrol: #12495a; }
+      html, body { width: 210mm; height: 297mm; }
+      body { font-family: 'Manrope', sans-serif; color: var(--ink); background: var(--paper); font-size: 8.9pt; line-height: 1.5; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page { display: grid; grid-template-columns: 1fr 68mm; height: 297mm; overflow: hidden; }
+      .main { padding: 16mm 11mm 14mm 16mm; }
+      .side { background: var(--side); padding: 16mm 12mm 14mm 10mm; border-left: 0.3mm solid var(--rule); }
+
+      .name { font-family: 'Newsreader', serif; font-weight: 380; font-size: 33pt; line-height: 0.98; letter-spacing: -0.02em; }
+      .name em { display: block; font-style: italic; font-weight: 340; color: var(--petrol); }
+      .headline { margin-top: 4.5mm; font-weight: 650; font-size: 9.6pt; line-height: 1.4; color: var(--ink2); max-width: 105mm; }
+      .contact { display: flex; flex-wrap: wrap; gap: 1.5mm 6mm; margin-top: 5mm; padding: 3mm 0; border-block: 0.3mm solid var(--rule); font-size: 8.4pt; }
+      .contact span { white-space: nowrap; }
+      .contact b { font-family: 'Plex Mono', monospace; font-weight: 500; font-size: 6.4pt; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink3); margin-right: 1.6mm; }
+
+      h2 { display: flex; align-items: center; gap: 3mm; margin: 6mm 0 2.6mm; font-family: 'Plex Mono', monospace; font-weight: 500; font-size: 7.2pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--petrol); }
+      h2::after { content: ''; flex: 1; height: 0.3mm; background: var(--rule); }
+      .side h2:first-of-type { margin-top: 6mm; }
+
+      .profile { font-size: 9.2pt; line-height: 1.6; color: var(--ink2); }
+      .entry { margin-bottom: 3.6mm; }
+      .entry--hl { padding-left: 3mm; border-left: 0.7mm solid var(--petrol); }
+      .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+      .entry h3 { font-family: 'Newsreader', serif; font-weight: 480; font-size: 11.6pt; line-height: 1.2; }
+      .date { flex: none; font-family: 'Plex Mono', monospace; font-size: 7.4pt; color: var(--ink3); }
+      .entity { margin-top: 0.6mm; font-weight: 650; font-size: 8.6pt; color: var(--petrol); }
+      ul.tasks { margin-top: 2mm; list-style: none; }
+      ul.tasks li { position: relative; padding-left: 4mm; margin-bottom: 1mm; color: var(--ink2); }
+      ul.tasks li::before { content: ''; position: absolute; left: 0; top: 0.72em; width: 2mm; height: 0.3mm; background: var(--ink3); }
+
+      .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+      .plain-text { color: var(--ink2); }
+      .kv { display: flex; justify-content: space-between; gap: 3mm; padding: 0.9mm 0; border-bottom: 0.25mm solid var(--rule); font-size: 8.4pt; }
+      .kv:last-child { border-bottom: 0; }
+      .kv span:first-child { color: var(--ink3); }
+      .kv span:last-child { font-weight: 650; text-align: right; }
+
+      .photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; display: block; }
+      .side-entry { margin-bottom: 3mm; }
+      .side-entry h3 { font-weight: 700; font-size: 8.5pt; line-height: 1.35; }
+      .side-entry p { color: var(--ink2); font-size: 8.2pt; line-height: 1.45; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <main class="main">
+        <h1 class="name">Laura <em>Coello Cabada</em></h1>
+        <p class="headline">Técnica en Operaciones de Laboratorio · Cursando el TS en Laboratorio de Análisis y de Control de Calidad</p>
+        <div class="contact">
+          <span><b>Tel.</b>633 07 49 29</span>
+          <span><b>Correo</b>coellolaura7@gmail.com</span>
+          <span><b>Lugar</b>Lugo, Galicia</span>
+        </div>
+
+        <h2>Perfil</h2>
+        <p class="profile">
+          Técnica en Operaciones de Laboratorio que cursa actualmente el ciclo superior de Laboratorio de Análisis y de
+          Control de Calidad. Prácticas en el laboratorio del Aula de Produtos Lácteos de Lugo: preparación y toma de
+          muestras, higiene y esterilización, y mantenimiento de equipos. Interés especial por la calidad y la microbiología
+          de la leche y los productos lácteos. Busco empresa del sector alimentario para realizar la FP Dual.
+        </p>
+
+        <h2>Experiencia</h2>
+        <div class="entry">
+          <div class="entry-head"><h3>Técnica de laboratorio en prácticas</h3><span class="date">Abr 2025 – Jun 2025</span></div>
+          <p class="entity">Aula de Produtos Lácteos e Tecnoloxías Alimentarias (APLTA), Lugo</p>
+          <ul class="tasks">
+            <li>Preparación de muestras para su análisis por el equipo especialista.</li>
+            <li>Colaboración con el departamento de calidad en la toma de muestras y el análisis de datos.</li>
+            <li>Mantenimiento y cuidado de instrumentos y equipos de laboratorio, atendiendo a su instalación y calibrado.</li>
+            <li>Desinfección de superficies de trabajo y esterilización del instrumental.</li>
+            <li>Cumplimiento de las normas de seguridad industrial y uso adecuado de los equipos de protección individual (EPI).</li>
+            <li>Seguimiento de los procedimientos de trabajo y de las prácticas de higiene del laboratorio.</li>
+          </ul>
+        </div>
+
+        <h2>Formación</h2>
+        <div class="entry entry--hl">
+          <div class="entry-head"><h3>Técnico Superior en Laboratorio de Análisis y de Control de Calidad</h3><span class="date">2025 – 2027 · en curso</span></div>
+          <p class="entity">IES Lucus Augusti, Lugo</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><h3>Técnico en Operaciones de Laboratorio</h3><span class="date">2023 – 2025</span></div>
+          <p class="entity">IES Lucus Augusti, Lugo</p>
+        </div>
+        <div class="entry">
+          <div class="entry-head"><h3>Educación Secundaria Obligatoria</h3><span class="date">2019 – 2023</span></div>
+          <p class="entity">IES Leiras Pulpeiro, Lugo</p>
+        </div>
+
+        <div class="cols">
+          <div>
+            <h2>Competencias personales</h2>
+            <p class="plain-text">Comunicación, trabajo en equipo, responsabilidad, resolución de problemas, atención al detalle.</p>
+          </div>
+          <div>
+            <h2>Otros datos</h2>
+            <div class="kv"><span>Idiomas</span><span>Español y gallego</span></div>
+            <div class="kv"><span>Carné de conducir</span><span>Permiso B</span></div>
+          </div>
+        </div>
+      </main>
+
+      <aside class="side">
+        <img class="photo" src="../images/laura-coello-cabada.jpg" alt="" />
+
+        <h2>Certificaciones</h2>
+        <div class="side-entry">
+          <h3>Microbiología de la Leche</h3>
+          <p>Aula de Produtos Lácteos, Lugo · Abril de 2024 · 1 mes</p>
+        </div>
+        <div class="side-entry">
+          <h3>Prevención de Riesgos Laborales</h3>
+          <p>IES Lucus Augusti, Lugo · 2023 – 2025 · 2 meses</p>
+        </div>
+
+        <h2>Competencias técnicas</h2>
+        <div class="side-entry">
+          <h3>Análisis y técnicas de laboratorio</h3>
+          <p>Preparación de muestras, esterilización de instrumental, manejo y cuidado de equipos, calibración de equipos, técnicas asépticas.</p>
+        </div>
+        <div class="side-entry">
+          <h3>Control de calidad</h3>
+          <p>Toma de muestras, análisis de datos, aplicación de procedimientos de trabajo, interpretación de resultados analíticos, trazabilidad.</p>
+        </div>
+        <div class="side-entry">
+          <h3>Microbiología y productos lácteos</h3>
+          <p>Microbiología de la leche, técnicas de cultivo microbiológico, control microbiológico de muestras, higiene y seguridad alimentaria.</p>
+        </div>
+        <div class="side-entry">
+          <h3>Seguridad e higiene</h3>
+          <p>Normas de seguridad industrial, uso de equipos de protección individual, desinfección del área de trabajo, prevención de riesgos laborales, identificación de riesgos.</p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>

@@ -1477,6 +1477,12 @@ main:focus {
   }
 }
 
+@media (min-width: 1140px) {
+  .cert-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 /* Detalle de certificación */
 .cert-dialog {
   width: min(920px, calc(100% - 32px));

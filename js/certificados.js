@@ -43,6 +43,29 @@ const CERTIFICADOS = [
     documento: null,
   },
   {
+    id: 'higiene-appcc-industria-lactea',
+    titulo: 'Higiene y APPCC en la Industria Láctea',
+    subtitulo: null,
+    area: 'Seguridad alimentaria',
+    resumen:
+      'Higiene en la industria láctea y sistema APPCC (Análisis de Peligros y Puntos de Control Crítico) para garantizar la seguridad de los productos.',
+    descripcion:
+      'Formación sobre las prácticas de higiene en la industria láctea y el sistema APPCC (Análisis de Peligros y Puntos de Control Crítico), orientado a identificar los peligros para la seguridad alimentaria y a controlarlos en los puntos críticos del proceso.',
+    contenidos: [],
+    competencias: [
+      'Prácticas de higiene en la industria láctea',
+      'Sistema APPCC',
+      'Identificación de peligros alimentarios',
+      'Puntos de control crítico',
+      'Seguridad alimentaria',
+    ],
+    entidad: 'Aula de Produtos Lácteos, Lugo',
+    fuenteEntidad: null,
+    fecha: 'Abril de 2024',
+    duracion: null,
+    documento: null,
+  },
+  {
     id: 'prevencion-riesgos-laborales',
     titulo: 'Prevención de Riesgos Laborales',
     subtitulo: 'Aplicada al entorno de laboratorio industrial',
